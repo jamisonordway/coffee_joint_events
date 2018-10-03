@@ -19,13 +19,12 @@ class App extends Component {
     .then(function (result) {
       return result.json();
     }).then(function (json) {
-      let events = json.events.map(function(event) {
-        // console.log(this.state);
-        this.setState({
+      json.events.map(function(event) {
+        return {
           eventText: event.name.text,
           eventImage: event.logo.url
-        })
-      });
+        }
+      })
     })
   }
 
