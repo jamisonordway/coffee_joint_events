@@ -4,15 +4,18 @@ import './App.css';
 import EventTitle from './components/eventTitle' 
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      eventData: this.getEventsList(),
-      eventText: '',
-      eventImage: ''
+      eventData: this.getEventsList()
     };
-    this.getEventsList = this.getEventsList.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange(event) {
+    this.setState({ eventData: this.props});
+  }
+  
   
   getEventsList() {
     fetch('https://www.eventbriteapi.com/v3/events/search/?q=meow+wolf&token=GV4WN6VQGEDOJ565HBV4')
@@ -20,13 +23,14 @@ class App extends Component {
       return result.json();
     }).then(function (json) {
       json.events.map(function(event) {
-        return {
-          eventText: event.name.text,
-          eventImage: event.logo.url
-        }
+        return event
+        // return {
+          //   eventText: event.name.text,
+          //   eventImage: event.logo.url
+          // }
+        })
       })
-    })
-  }
+    }
 
 
   render() {
@@ -40,5 +44,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
