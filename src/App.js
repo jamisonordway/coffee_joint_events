@@ -1,44 +1,39 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import EventTitle from './components/eventTitle' 
+import EventsContainer from './components/EventsContainer' 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eventData: this.getEventsList()
+      eventData: []
     };
-    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({ eventData: this.props});
+  componentDidMount() {
+    this.getEventsList()
   }
   
+  getEventsList = async () => {
+    const response = await fetch('https://www.eventbriteapi.com/v3/events/search/?q=meow+wolf&token=GV4WN6VQGEDOJ565HBV4')
+    const result = await response.json();
+    const events = result.events
+    const eventInfo = events.map((event)  => {
+      return {
+        eventTitle: event.name.text,
+        eventImage: event.logo.url
+      }
+    })
+    this.setState({ eventData: [...eventInfo] });
+  }
   
-  getEventsList() {
-    fetch('https://www.eventbriteapi.com/v3/events/search/?q=meow+wolf&token=GV4WN6VQGEDOJ565HBV4')
-    .then(function (result) {
-      return result.json();
-    }).then(function (json) {
-      json.events.map(function(event) {
-        return event
-        // return {
-          //   eventText: event.name.text,
-          //   eventImage: event.logo.url
-          // }
-        })
-      })
-    }
-
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <img src={this.} className="eventImage" alt="event image" /> */}
-          <EventTitle eventImage={'this.state.eventImage'} eventName={'this.state.eventText'}/>
+        
+          <EventsContainer eventData={this.state.eventData} />
         </header>
       </div>
     );
