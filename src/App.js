@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import EventsContainer from './components/EventsContainer' 
+import EventDate from './components/EventDate'
 
 class App extends Component {
   constructor(props) {
@@ -22,7 +23,10 @@ class App extends Component {
     const eventInfo = events.map((event)  => {
       return {
         eventTitle: event.name.text,
-        eventImage: event.logo.url
+        eventImage: event.logo.url,
+        eventDate: event.start.local,
+        eventDescription: event.description.text,
+        eventLink: event.url
       }
     })
     this.setState({ eventData: [...eventInfo] });
@@ -32,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        
+          <EventDate eventDate={this.state.eventData} />
           <EventsContainer eventData={this.state.eventData} />
         </header>
       </div>

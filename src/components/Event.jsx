@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 const Event = ({eventTitle, eventImage}) => {
-  const eventFunInfo =  
+  const eventTitleInfo =  
   <article>
     <h2>{eventTitle}</h2>
     <h3>{eventImage}</h3>
   </article>
 
   return(
-    eventFunInfo
+    eventTitleInfo
   )
 
 }
