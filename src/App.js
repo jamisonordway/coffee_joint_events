@@ -36,7 +36,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <EventDate eventDate={this.state.eventData} />
           <EventsContainer eventData={this.state.eventData} />
         </header>
       </div>

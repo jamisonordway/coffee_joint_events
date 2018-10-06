@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import '../App.css'
 
 const Event = ({eventTitle, eventImage}) => {
   const eventTitleInfo =  
-  <article>
+  <article className='event-title'>
+    <img src={eventImage}/>
     <h2>{eventTitle}</h2>
-    <h3>{eventImage}</h3>
   </article>
 
   return(
