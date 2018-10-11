@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import EventsContainer from './components/EventsContainer' 
+import Event from './components/Event'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      eventData: []
+      eventsData: []
     };
   }
   componentDidMount() {
@@ -18,24 +18,33 @@ class App extends Component {
     const response = await fetch('https://www.eventbriteapi.com/v3/events/search/?q=meow+wolf&token=GV4WN6VQGEDOJ565HBV4')
     const result = await response.json();
     const events = result.events
-    const eventInfo = events.map((event)  => {
+    const eventsData = events.map((event)  => {
       return {
-        eventTitle: event.name.text,
-        eventImage: event.logo.url,
-        eventDate: event.start.local,
-        eventDescription: event.description.text,
-        eventLink: event.url
+        title: event.name.text,
+        image: event.logo.url,
+        date: event.start.local,
+        description: event.description.text,
+        link: event.url
       }
     })
-    this.setState({ eventData: [...eventInfo] });
+    this.setState({ eventsData });
   }
   
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <EventsContainer eventData={this.state.eventData} />
         </header>
+          {this.state.eventsData.map((event) => {
+            return <Event
+            key={event.id}
+            title={event.title}
+            image={event.image}
+            date={event.date}
+            description={event.description}
+            link={event.link}
+            />
+          })}
       </div>
     );
   }
