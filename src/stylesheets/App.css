@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -7,8 +12,8 @@
   height: 40vmin;
 }
 
-.App-header {
-  background-color: #282c34;
+/* .App-header {
+  background-color: #EEEFF6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +21,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -32,6 +37,14 @@
 }
 
 .event-title {
-  border: solid 1px black;
-  padding-top: 1em;
+  border: solid 1px D93187;
+  /* padding-top: 1em; */
+}
+
+h1 {
+  color: D93187;
+}
+
+h2 {
+  color: D93187;
 }
