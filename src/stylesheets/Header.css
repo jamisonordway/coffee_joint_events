@@ -1,0 +1,11 @@
+.header-title {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #242963;
+  color: white;
+  width: 100%;
+  z-index: 3;
+}

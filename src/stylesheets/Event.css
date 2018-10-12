@@ -1,0 +1,68 @@
+.info {
+  background-color: #E8E8E8;
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  border: 1px solid #000;
+  padding: 2rem;
+  box-shadow: 1px 1px 1px .5px;
+}
+
+.card { 
+  position: relative;
+}
+
+.event-left {
+  width: 30%;
+}
+
+.event-start {
+  padding: .5rem 0 0;
+}
+
+.event-center {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 2rem 5rem;
+}
+
+img {
+  margin: 0 auto 1rem;
+  width: 500px;
+}
+
+.description {
+  margin-top: 2.8rem;
+  font-size: 15px;
+  height: 21rem;
+  /* width: 5rem; */
+  overflow-y: scroll;
+  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  color: black;
+}
+
+h1 {
+  font-size: 30px;
+  margin: 0 auto;
+  width: 500px;
+  color: black;
+}
+
+a {
+  color: #7BBA6B;
+}
+
+a:visited {
+  color: #D93187;
+}
+
+.event-right {
+  color: #7BBA6B;
+  position: absolute;
+  bottom: 1.5rem;
+  right: 9rem;
+  /* padding-bottom: 2rem; */
+  /* display: block; */
+  /* width: 15%; */
+}
