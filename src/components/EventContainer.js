@@ -7,12 +7,12 @@ const EventContainer = ({ eventsData }) => {
     console.log(event.start.local)
     return (
       <Event 
-        key= {index}
+        key={event.id}
         title={event.name.text}
-        image= {event.logo.url}
-        date= {event.start.local}
-        description= {event.description.text}
-        link= {event.url}
+        image={event.logo.url}
+        date={event.start.local}
+        description={event.description.text}
+        link={event.url}
       />
     )
   })
