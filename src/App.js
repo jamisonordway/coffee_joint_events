@@ -5,12 +5,10 @@ import EventContainer from './components/EventContainer';
 import Header from './components/Header';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+    state = {
       eventsData: []
     };
-  }
+  
   componentDidMount() {
     this.getEventsList()
   }
