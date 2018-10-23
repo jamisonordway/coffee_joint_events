@@ -5,16 +5,6 @@ import { startDateCleaner } from '../cleaner';
 
 const Event = ({title, image, date, description, link}) => {
   const cleanStart= startDateCleaner(date) 
-  console.log('start', cleanStart)
-  // const eventInfo =  
-  // <article className='title'>
-  //   <img src={image} alt="event"/>
-  //   <h2>{title}</h2>
-  //   <p className='date'>{date}</p>
-  //   <p className='description'>{description}</p>
-  //   <p className='link'>{link}</p>
-  // </article> 
-
 
   return(
     <div className='card'>
@@ -24,7 +14,7 @@ const Event = ({title, image, date, description, link}) => {
           <p className= 'description'>{description}</p>
         </div>
         <div className='event-center'>
-          <img src={image}></img>
+          <img src={image} alt={title}></img>
           <h1>{title}</h1>
         </div>
       </article>
