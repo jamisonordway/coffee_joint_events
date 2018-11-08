@@ -1,6 +1,6 @@
-## Meow Wolf Events
+## The Coffee Joint Events
 
-Use this app to check out upcoming events at Meow Wolf!
+Use this app to check out upcoming events at The Coffee Joint!
 
 Events are included using the [Eventbrite API](https://www.eventbrite.com/developer/v3/).
 
