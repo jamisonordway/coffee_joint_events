@@ -9,7 +9,6 @@ const EventContainer = ({ eventsData }) => {
       <Event 
         key={event.id}
         title={event.name.text}
-        image={event.logo.url}
         date={event.start.local}
         description={event.description.text}
         link={event.url}

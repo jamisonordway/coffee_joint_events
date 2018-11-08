@@ -4,8 +4,7 @@ import '../stylesheets/Header.css';
 const Header = () => {
   return(
     <header>
-      <h1 className='header-title'>MEOW WOLF Upcoming Events</h1>
-      <img href='mw-logo.png' alt='logo'></img>
+      <h1 className='header-title'>The Coffee Joint Upcoming Events</h1>
     </header>
   );
 }
