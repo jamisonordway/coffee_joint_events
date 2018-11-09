@@ -1,6 +1,6 @@
 ## The Coffee Joint Events
 
-Use this app to check out upcoming events at The Coffee Joint!
+Use [this app](https://coffeejointevents.herokuapp.com/) to check out upcoming events at The Coffee Joint!
 
 Events are included using the [Eventbrite API](https://www.eventbrite.com/developer/v3/).
 
