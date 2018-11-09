@@ -16,6 +16,7 @@
 
 .event-left {
   width: 30%;
+  padding-bottom: 2rem;
 }
 
 .event-start {
@@ -39,6 +40,7 @@ img {
   height: 21rem;
   /* width: 5rem; */
   overflow-y: scroll;
+  
   border: 1px solid gray;
   padding: 0.5rem 1rem;
   color: black;
