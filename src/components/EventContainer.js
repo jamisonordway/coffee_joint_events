@@ -4,11 +4,12 @@ import '../stylesheets/EventContainer.css';
 
 const EventContainer = ({ eventsData }) => {
   const eventInfo = eventsData.map((event, index)  => {
-    console.log(event.start.local)
+    console.log(event)
     return (
       <Event 
         key={event.id}
         title={event.name.text}
+        image={event.logo.url}
         date={event.start.local}
         description={event.description.text}
         link={event.url}

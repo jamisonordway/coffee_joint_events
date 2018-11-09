@@ -14,7 +14,7 @@ class App extends Component {
   }
   
   getEventsList = async () => {
-    const response = await fetch('https://www.eventbriteapi.com/v3/events/search/?q=the+coffee+joint&token=GV4WN6VQGEDOJ565HBV4')
+    const response = await fetch('https://www.eventbriteapi.com/v3/events/search/?q=the+coffee+joint+Yuma&token=GV4WN6VQGEDOJ565HBV4')
     const result = await response.json();
     const events = result.events
     this.setState({ eventsData: events });
