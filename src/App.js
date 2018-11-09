@@ -8,11 +8,13 @@ class App extends Component {
     state = {
       eventsData: []
     };
-  
+
   componentDidMount() {
     this.getEventsList()
   }
-  
+
+  // you could use chaining .then()'s to show you know how promises work,
+  // then add error handling with a .catch
   getEventsList = async () => {
     const response = await fetch('https://www.eventbriteapi.com/v3/events/search/?q=the+coffee+joint+Yuma&token=GV4WN6VQGEDOJ565HBV4')
     const result = await response.json();
@@ -20,12 +22,12 @@ class App extends Component {
     this.setState({ eventsData: events });
   }
 
-  
+
   render() {
     return (
       <div className="App">
         <Header />
-        <EventContainer 
+        <EventContainer
           eventsData={this.state.eventsData}
         />
       </div>

@@ -4,9 +4,10 @@ import '../stylesheets/EventContainer.css';
 
 const EventContainer = ({ eventsData }) => {
   const eventInfo = eventsData.map((event, index)  => {
+    // get those logs outta here!
     console.log(event)
     return (
-      <Event 
+      <Event
         key={event.id}
         title={event.name.text}
         image={event.logo.url}
@@ -16,7 +17,7 @@ const EventContainer = ({ eventsData }) => {
       />
     )
   })
- 
+
   return(
     <div className='container'>{eventInfo}</div>
   );

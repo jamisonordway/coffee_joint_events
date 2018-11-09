@@ -1,3 +1,8 @@
+// if you're not using service workers, remove them.
+// Leaving in stuff CRA gives you out of the box makes it look like you're a bit clueless about CRA
+// also, put your logo in an images/assets file
+// if you don't need the meow wolf logo, get rid of it
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

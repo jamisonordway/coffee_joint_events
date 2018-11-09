@@ -4,7 +4,7 @@ import { startDateCleaner } from '../cleaner';
 
 
 const Event = ({title, image, date, description, link}) => {
-  const cleanStart= startDateCleaner(date) 
+  const cleanStart= startDateCleaner(date)
 
   return(
     <div className='card'>
@@ -19,6 +19,7 @@ const Event = ({title, image, date, description, link}) => {
         </div>
       </article>
       <div className='event-right'>
+        {/* maybe make the link a button */}
         <a href={link}>Click here to learn more</a>
       </div>
     </div>
