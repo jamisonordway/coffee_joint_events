@@ -1,11 +1,12 @@
 .header-title {
+  font-family: 'Montserrat', sans-serif;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background-color: #242963;
-  color: white;
+  background-color: #4E537C;
+  color: #040627;
   width: 100%;
   z-index: 3;
 }

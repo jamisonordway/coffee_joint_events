@@ -1,10 +1,12 @@
 .info {
-  background-color: #E8E8E8;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #C2BDA4;
   display: flex;
   flex-direction: row;
   margin: 2rem;
+  margin-top: 3rem;
   border: 1px solid #000;
-  padding: 2rem;
+  padding: 4rem 2rem 0rem 2rem;
   box-shadow: 1px 1px 1px .5px;
 }
 
@@ -50,15 +52,15 @@ h1 {
 }
 
 a {
-  color: #7BBA6B;
+  color: black;
 }
 
 a:visited {
-  color: #D93187;
+  color: #C4D1E6;
 }
 
 .event-right {
-  color: #7BBA6B;
+  color: black;
   position: absolute;
   bottom: 1.5rem;
   right: 9rem;
