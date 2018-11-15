@@ -8,6 +8,8 @@ Facebook events coming soon!
 
 Want to contribute? Make sure you have the latest version of Node installed.
 
+New issues, bug fixes, and improvements to our documentation are always welcome.
+
 Fork and clone this repo, then run
 
 `npm install`
