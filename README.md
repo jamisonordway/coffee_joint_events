@@ -1,10 +1,8 @@
 ## The Coffee Joint Events
 
-[This app](https://coffeejointevents.herokuapp.com/) will be a one-stop-shop for all events and happenings at [The Coffee Joint](https://thecoffeejointco.com/)! 
+[This app](https://cannacoding.herokuapp.com/) will be a one-stop-shop for all cannacoding events at [The Coffee Joint](https://thecoffeejointco.com/)! 
 
 Events are included using the [Eventbrite API](https://www.eventbrite.com/developer/v3/).
-
-Facebook events coming soon!
 
 Want to contribute? Make sure you have the latest version of Node installed.
 
